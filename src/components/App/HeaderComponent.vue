@@ -1,10 +1,10 @@
 <template>
     <header class="main-header">
-      <router-link to="/"><h1>Félix Laviéville</h1></router-link>
+      <router-link :to="{name: 'home'}"><h1>Félix Laviéville</h1></router-link>
       <nav>
 
-        <router-link to="/about">Historique</router-link>
-        <router-link to="/projects" class="important">Projets</router-link>
+        <router-link :to="{name: 'about'}">Historique</router-link>
+        <router-link :to="{name: 'projects'}">Projets</router-link>
       </nav>
     </header>
 </template>
