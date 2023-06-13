@@ -1,8 +1,9 @@
 <template>
     <header class="main-header">
-      <router-link :to="{name: 'home'}"><h1>Félix Laviéville</h1></router-link>
+      <router-link :to="{name: 'home'}">
+        <h1 class="creative"><span class="rainbow">Creative Dev</span></h1>
+      </router-link>
       <nav>
-
         <router-link :to="{name: 'about'}">Historique</router-link>
         <router-link :to="{name: 'projects'}">Projets</router-link>
       </nav>
@@ -62,11 +63,11 @@ header {
   background: $background-contrast;
   max-width: 1300px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   border-radius: 10px;
   transition: transform .2s ease-in-out;
   a {
@@ -74,18 +75,6 @@ header {
     color: $text;
     text-underline: none;
     appearance: none;
-    &.router-link-active h1 {
-      display: block;
-      position: relative;
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: $primary;
-        animation: bgAnim 2s ease-in-out infinite;
-      }
-    }
   }
   nav  {
     display: flex;
